@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { register } from '../services/apicalls'
+import {error} from React
 
 function Register() {
   
@@ -12,13 +13,24 @@ function Register() {
   async function UserRegister(event){
 
     event.preventDefault()
-    console.log(user)
+    
+    console.log("Data sent",user)
 
-    let res = await register(user)
-    console.log(res.data)
+    try{
 
-    if (res.status == "201"){
+      let res = await register(user)
+      console.log("Register Success",res.data)
+
+      if (res.status == "201"){
       navigate('/login')
+      
+    }
+
+    }catch(error){
+
+    console.log("REGISTER STATUS:", error.response?.status);
+    console.log("REGISTER ERROR:", error.response?.data);
+
     }
     
   }
