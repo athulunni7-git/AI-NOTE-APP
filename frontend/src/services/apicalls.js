@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create a reusable axios instance
 const api = axios.create({
-  baseURL: "https://noteai-backend.onrender.com",
+  baseURL: "https://noteai-app-eihm.onrender.com",
 });
 
 // Attach Access token automatically to every request
