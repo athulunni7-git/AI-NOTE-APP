@@ -23,7 +23,7 @@ api.interceptors.response.use(
       if (refresh) {
         try {
           // Get new Access token
-          const res = await axios.post("http://127.0.0.1:8000/api/token/refresh/", { refresh });
+          const res = await axios.post("https://noteai-app-eihm.onrender.com/api/token/refresh/", { refresh });
           localStorage.setItem("Access", res.data.access);
 
           // Retry the original request with new token
@@ -57,7 +57,7 @@ export async function getallnotes() {
 }
 
 export async function noteDetail(id) {
-    return await api.get(`/notes/${id}`)
+    return await api.get(`/notes/${id}/`)
     
 }
 
