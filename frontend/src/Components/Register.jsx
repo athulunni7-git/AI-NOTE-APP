@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { register } from '../services/apicalls'
-import {error} from React
+
 
 function Register() {
   

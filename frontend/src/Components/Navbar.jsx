@@ -17,7 +17,7 @@ function Navbar({ islogin, setIslogin }) {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand ms-4" href="#">
+          <a className="navbar-brand ms-5 text-primary" href="#" id="NoteAI">
             NoteAI
           </a>
           <button
